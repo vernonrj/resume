@@ -1,0 +1,237 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\usepackage{verbatim}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Vernon Jones}}
+
+(360) 600-6739\\
+vernonrjones@gmail.com
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Objective}
+\begin{indentsection}{\parindent}
+\begin{description*}
+		\item Employment in the field of Computer Engineering, Embedded Systems.
+\end{description*}
+\end{indentsection}
+\vspace{1em}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item 
+	\headerrow
+                {\textbf{B.S. Computer Engineering}}
+				{\textbf{Current GPA: 3.64}}
+	\\
+	\headerrow
+		{\emph{Portland State University}}
+		{\emph{Graduation December 2013}}
+\end{itemize}
+\vspace{1em}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Core Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Proficient Languages:]
+		C, \CPP, Python, Shell Script (Bash)
+	\item[Familiar Languages:]
+		Python, Verilog, Assembly, Clojure 
+	\item[Software:]
+    GNU Tools (GCC, GDB, Valgrind), VCS (Git, ClearCase)
+	\item[Development Platforms:]
+	Windows (gcc via MinGW, cmd.exe), Linux
+	\item[Hardware:]
+    Digital Design, FPGAs
+\end{description*}
+\end{indentsection}
+\vspace{1em}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+	{\textbf{Intern}}
+	{\textbf{Rohde \& Schwarz inc}}
+	\\
+	\headerrow
+		{\emph{Summer 2013}}
+		{\emph{Beaverton, OR}}
+		\\
+		I mainly worked on in-stack unit testing facilities. This included integrating with an automated testing system, retrieving test results from the system, and designing and implementing a test assertion framework. During this time, I also got some experience with cell network protocols, mostly the CDMA2000 protocols such as 1xRTT and 1xEVDO.
+	
+	\item
+	\headerrow
+	{\textbf{Music Marching Technician}}
+	{\textbf{Skyview High School}}
+	\\
+	\headerrow
+		{\emph{Fall 2008, 2010, 2011}}
+		{\emph{Vancouver, WA}}
+		\\
+		I worked with 50-60 high school students to improve their marching technique and build team skills. I improved my communication and leadership skills while teaching. I learned how to resolve conflicts and how to motivate large groups of people.
+
+\end{itemize}
+
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Academic Projects}
+\begin{itemize}
+  \item 
+  \headerrow 
+  {\textbf{Processor Cache Simulator (\CPP)}}
+  {\textbf{github.com/vernonrj/ballin-dangerzone}}
+  \\
+  I developed an L1 cache simulator in a group of four people. The cache read in trace data and output hit/miss statistics once finished. I developed the overall design for the project, including data structures.
+  \item 
+  \headerrow 
+  {\textbf{Light-up Spinning Disk (C)}}
+  {\textbf{projects.cecs.pdx.edu/projects/fa2012ece411-operationawesome}}
+  \\
+  For my Practicum, I worked in a group of four to design a flying disc that lit up when it spun. The project was intended to introduce us to Industry Design Processes (which was the name of the class). Over the process of development, we learned about Gantt charts, Revision Control Systems, PCBs, and soldering.
+  \item
+  \headerrow
+  {\textbf{Distributed Sensor Infrastructure (C)}}
+  {\textbf{github.com/squidpie/sansgrid}}
+  \\
+  In my Capstone project, I worked in a team of five to create a project that brings the Internet of Things to embedded systems. My part of the project involved writing a software router for a Raspberry Pi embedded Linux system. The router communicated with an XBee radio (via SPI protocol) and a server (via HTTP using curl). Our group won the Most Creative Solution award and had a successful demonstration.
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Personal Projects}
+\begin{itemize}
+  \item
+  \headerrow
+  {\textbf{Drill Composing for Marching (C/GTK+)}}
+  {\textbf{github.com/vernonrj/drill-writer}}
+  \\
+  This is a project I worked on in my spare time to get a better grasp of C. It is designed to ease the process of writing drill for marching bands or drum corps. There are a few proprietary solutions, but none of them address casual users. This project is designed for those casual users. It is open source, written in C, and uses the GTK widget toolkit.
+\end{itemize}
+
+\begin{comment}
+\hrule
+\begin{center}
+{\emph{Honors and Projects Continue on Next Page}}
+
+\end{center}
+
+\newpage
+\end{comment}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Accomplishments}
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+	{\textbf{Eagle Scout (2007)}}
+	{\textbf{Troop 48, SilverStar District, Cascade Pacific Counsel}}
+	\\
+	Developed project management skills, verbal communication skills and interpersonal skills. Achieved rank of Eagle Scout in the Boy Scouts of America.  Directed and instructed volunteers in completing a large team project.  Organized project details with time constraints. Coordinated donation and delivery of raw materials.
+	
+	\item
+	\headerrow
+	{\textbf{Drum Corps, Tuba Player (2004-07, 2009-11)}}
+	{\textbf{DCI, Division III, II, World Class}}
+	\\
+	Learned interpersonal and communication skills with a group of 100 other people in close quarters marching in Drum Corps during the summer.
+\end{itemize}
+
+
+\begin{comment}
+\hrule
+\vspace{-0.4em}
+\subsection*{References}
+\begin{itemize}
+  \item
+  \headerrow
+    {\textbf{Kevin Barry}}
+    {kevin.barry@silverbayseafoods.com}
+  \\
+  \headerrow
+    {\textbf{Plant Manager, Silver Bay Seafoods}}
+    {907.738.7270}
+  \item
+  \headerrow
+    {\textbf{Doug Hall}}
+    {dough@ece.pdx.edu}
+  \\
+  \headerrow
+    {\textbf{Professor, Portland State University}}
+    {503.725.5396}
+  \item
+  \headerrow
+    {\textbf{Mark Faust}}
+    {faustm@ece.pdx.edu}
+  \\
+  \headerrow
+    {\textbf{Professor, Portland State University}}
+    {503.725.5412}
+    
+\end{itemize}
+\end{comment}
+
+\end{document}
